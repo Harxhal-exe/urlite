@@ -18,13 +18,13 @@ export default function ContactPage() {
 
       const data = await res.json();
       if (data.success) {
-        setStatus("✅ Message saved & emailed!");
+        setStatus("Message saved & emailed!");
         setForm({ name: "", email: "", message: "" });
       } else {
-        setStatus("❌ Error: " + data.error);
+        setStatus("Error: " + data.error);
       }
     } catch (err) {
-      setStatus("❌ Failed to connect to server");
+      setStatus("Failed to connect to server");
     }
   };
 
